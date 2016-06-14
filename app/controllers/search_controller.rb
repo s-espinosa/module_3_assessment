@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
   def index
-    binding.pry
+    @stores = BestBuyService.new.all_by_zip(params[:zip])
   end
 end
