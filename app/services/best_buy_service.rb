@@ -22,7 +22,7 @@ class BestBuyService
       req.url "/v1/stores(storeId=#{id})"
       req.params['format'] = "json"
       req.params['apiKey'] = ENV["best_buy_key"]
-      req.params['show'] = "storeId,storeType,longName,city,phone,distance"
+      req.params['show'] = "storeId,storeType,longName,city,phone,distance,hoursAmPm"
     end
     JSON.parse(store.body)["stores"]
   end

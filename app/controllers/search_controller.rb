@@ -1,9 +1,9 @@
 class SearchController < ApplicationController
   def index
-    @stores = BestBuyService.new.all_by_zip(params[:zip])
+    @stores = Store.all_by_zip(params[:zip])
   end
 
   def show
-    @store = BestBuyService.new.by_id(params[:id])
+    @store = Store.by_id(params[:id])
   end
 end

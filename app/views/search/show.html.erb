@@ -10,11 +10,13 @@
     <th>Type</th>
   </tr>
     <tr>
-      <td><%= @store.first["storeId"] %></td>
-      <td><%= link_to @store.first["longName"], store_path(@store.first["storeId"])%></td>
-      <td><%= @store.first["city"] %></td>
-      <td><%= @store.first["distance"] %></td>
-      <td><%= @store.first["phone"] %></td>
-      <td><%= @store.first["storeType"] %></td>
+      <td><%= @store["storeId"] %></td>
+      <td><%= @store["longName"]%></td>
+      <td><%= @store["city"] %></td>
+      <td><%= @store["distance"] %></td>
+      <td><%= @store["phone"] %></td>
+      <td><%= @store["storeType"] %></td>
     </tr>
 </table>
+<br>
+<%= @store.hoursAmPm %>

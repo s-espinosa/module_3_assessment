@@ -9,4 +9,9 @@ class Store < OpenStruct
       Store.new(store_hash)
     end
   end
+
+  def self.by_id(id)
+    temp_store = service.by_id(id)
+    Store.new(temp_store.first)
+  end
 end
