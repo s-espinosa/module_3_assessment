@@ -12,6 +12,7 @@ gem "faker"
 gem "therubyracer"
 gem "less-rails-bootstrap"
 gem "figaro"
+gem 'active_model_serializers', '~> 0.10.0'
 
 group :development do
   gem "spring"

@@ -9,12 +9,11 @@ RSpec.describe "GET /api/v1/items" do
     expect(response.status).to eq(200)
     json_body = JSON.parse(response.body)
     expect(json_body.count).to eq(1)
-    p
-    expect(json_body["id"]).to eq("1")
-    expect(json_body["name"]).to eq("Item1")
-    expect(json_body["description"]).to eq("Description1")
-    expect(json_body["image_url"]).to eq("url")
-    expect(json_body["created_at"]).to eq(nil)
-    expect(json_body["updated_at"]).to eq(nil)
+    expect(json_body.first["id"]).to eq(1)
+    expect(json_body.first["name"]).to eq("Item1")
+    expect(json_body.first["description"]).to eq("Description1")
+    expect(json_body.first["image_url"]).to eq("url")
+    expect(json_body.first["created_at"]).to eq(nil)
+    expect(json_body.first["updated_at"]).to eq(nil)
   end
 end
