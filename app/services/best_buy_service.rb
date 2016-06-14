@@ -8,8 +8,11 @@ class BestBuyService
   end
 
   def all_by_zip(zip)
+
+
+
     @connection.get do |req|
-      req.url "/v1/stores(postalCode=#{zip})"
+      req.url "/v1/stores(area(#{zip},10))"
       req.params['format'] = "json"
       req.params['apiKey'] = ENV["best_buy_key"]
       req.params['show'] = "storeId,storeType,name,city,region"
