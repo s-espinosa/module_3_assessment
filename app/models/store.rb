@@ -1,6 +1,5 @@
 class Store < OpenStruct
   def self.service
-    binding.pry
     BestBuyService.new
   end
 
