@@ -1,0 +1,20 @@
+<h1>Store</h1>
+
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Name</th>
+    <th>City</th>
+    <th>Distance</th>
+    <th>Phone</th>
+    <th>Type</th>
+  </tr>
+    <tr>
+      <td><%= @store.first["storeId"] %></td>
+      <td><%= link_to @store.first["longName"], store_path(@store.first["storeId"])%></td>
+      <td><%= @store.first["city"] %></td>
+      <td><%= @store.first["distance"] %></td>
+      <td><%= @store.first["phone"] %></td>
+      <td><%= @store.first["storeType"] %></td>
+    </tr>
+</table>
