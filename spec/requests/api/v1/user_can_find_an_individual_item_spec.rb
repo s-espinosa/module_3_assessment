@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "GET /api/v1/items/1" do
-  it "it returns a list of items" do
+  it "it returns a single item" do
     Item.create(name: "Item1", description: "Description1", image_url: "url")
 
     get "/api/v1/items/1"

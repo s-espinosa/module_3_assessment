@@ -9,9 +9,6 @@ RSpec.describe "GET /api/v1/items" do
                 description: "Description2",
                 image_url: "url2")
 
-
-
-
     get "/api/v1/items"
 
     expect(response.status).to eq(200)
